@@ -18,41 +18,52 @@
 
 <body>
     <!--NAVBAR-->
-    <nav class="nav">
-        <div class="nav-login-container">
-            <img src="img/icons/KSPGames.png" alt="kspLogo">
-            <p class="nav-login-item">|</p>
-            <a href="#" class="nav-login-item">Inicio</a>
-            <a href="#" class="nav-login-item disabled">WebDav</a>
-        </div>
-        <div class="nav-login-container">
-            
-            <a href="http://10.0.33.2/DesarrolloWebProyecto/VistaUsuario/html/indexUser.php?user=ielizalde185@gmail.com" class="nav-login-item boton botonAzul">Regresar</a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-moradito">
+        <div class="container-fluid">
+            <img src="img/icons/KSPGames.png" class="navbar-brand img-fluid" alt="Logo">
+            <!-- <a href="#" class="navbar-brand">KSPGAMES</a> -->
+            <button class="navbar-toggler m-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
+                aria-controls="menu" aria-expanded="false" aria-label="Mostrar / Ocultar menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="navbar-nav me-auto mb-lg-0">
+                    <li class="nav-item"><a href="#" class="nav-link disabled">WebDav</a></li>
+                </ul>
+                <div>
+                    <a href="http://10.0.33.2/DesarrolloWebProyecto/VistaUsuario/html/indexUser.php?user=ielizalde185@gmail.com" class="btn btn-outline-secondary">Registrarse</a>
+                </div>
+            </div>
         </div>
     </nav>
-    <!--TITULO-->
-    <section class="titulo-principal">
-        <div class="parrafo">
-            <h1 id="inicio">KSP Games</h1>
-            <p>
-                Explora nuevos mundos, encuentra grandes juegos.<span> KSP Games</span>,
-                tu destino de entretenimiento interactivo.
-            </p>
+    
+    <main class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2>Listado de pedidos</h2>
+            </div>
         </div>
-        <div class="parrafo-img">
-            <img src="img/controlIcon.jpg" alt="" width="250px" height="250px">
+        <div class="row">
+            <div class="col-12">
+                <table class="table-responsive table-striped">
+                    <thead>
+                        <tr class="table-dark">
+                            <th>id</th>
+                            <th>Archivo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Pedido.pdf</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
         </div>
-    </section>
-    <main>
-       <h2>Listado de pedidos</h2>
-       <p>*Pedido(IdUsuario)(#Compra).pdf</p>
-       
-        <table>
-            <tr>
-                <td></td>
-            </tr>
-        </table>
     </main>
+
     <!--FOOTER-->
     <footer class="footer-container">
         <div class="footer-column columna1">
