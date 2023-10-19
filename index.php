@@ -43,6 +43,19 @@
                 <h2>Listado de pedidos</h2>
             </div>
         </div>
+        <ul>
+            <?php 
+            $directorio = 'ejemploPDF';
+            $archivos = scandir($directorio);
+
+            foreach ($archivos as $archivo){
+                if ($archivo != '.'&& $archivo != '..'){
+                    echo '<li><a href="'.$directorio.'/'.$archivo.'">'.$archivo.'</a></li>';
+                }
+            }
+            ?>
+        </ul>
+
         <div class="row">
             <div class="col-12">
                 <table class="table-responsive table-striped">
