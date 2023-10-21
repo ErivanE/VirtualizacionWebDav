@@ -56,7 +56,7 @@
             </div> -->
 
             <?php
-            $directorio = 'ejemploPDF/';
+            $directorio = '/home/pdf/';
             $archivos = scandir($directorio);
 
             foreach ($archivos as $archivo) {
