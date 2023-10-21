@@ -1,6 +1,4 @@
 <?php
-include ("php/conexion.php");
-
 $user = $_GET['user'];
 ?>
 <!DOCTYPE html>
@@ -62,20 +60,10 @@ $user = $_GET['user'];
 
             <?php
             $directorio = '/home/pdf';
-            $archivos = scandir($directorio);
-            $idBuscar;
-
-            $query = "SELECT id FROM usuarios WHERE correo = '$user'";
-            $restul = $conexion ->query($query);
-            if($restul -> num_rows > 0){
-                $row = $restul -> fetch_assoc();
-                $idBuscar = $row["id"];
-            }
-
-            $buscar = "recibo$idBuscar";
+            $patron = "$directorio/recibo$user*.pdf";
+            $archivos = glob($patron);
 
             foreach ($archivos as $archivo) {
-                if ($archivo != '.' && $archivo != '..' && strpos($archivo,$buscar)!== false) {
                     ?>
                     <div class="col-12">
                         <div class="row">
@@ -88,7 +76,6 @@ $user = $_GET['user'];
                         </div>
                     </div>
                     <?php
-                }
             }
             ?>
             <?php
