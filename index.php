@@ -70,7 +70,7 @@ $id = $_GET['id'];
                         <div class="row">
                             <div class="col-12 d-flex align-items-center">
                                 <i class=" h2 bi bi-file-pdf-fill"></i>
-                                <a href="<?php echo $directorio.'/'.$archivo?>">
+                                <a href="<?php echo $archivo?>" target="_blank">
                                     <?php echo basename($archivo)?>
                                 </a>
                             </div>
