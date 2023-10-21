@@ -1,3 +1,8 @@
+<?php
+include ("php/conexion.php");
+
+$user = $_GET['user'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,8 +38,8 @@
                     <li class="nav-item"><a href="#" class="nav-link disabled">WebDav</a></li>
                 </ul>
                 <div>
-                    <a href="VistaUsuario/html/login.html" class="btn btn-outline-secondary me-1">usuario</a>
-                    <a href="VistaUsuario/html/registro.html" class="btn btn-outline-primary">Regresar</a>
+                    <a href="#" class="btn btn-outline-secondary me-1">usuario</a>
+                    <a href="http://10.0.33.2/VistaUsuario/html/indexUser.php?user=<?php echo $user?>" class="btn btn-outline-primary">Regresar</a>
                 </div>
             </div>
         </div>
@@ -58,7 +63,16 @@
             <?php
             $directorio = '/home/pdf';
             $archivos = scandir($directorio);
-            $buscar = "recibo6";
+            $idBuscar;
+
+            $query = "SELECT id FROM usuarios WHERE correo = '$user'";
+            $restul = $conexion ->query($query);
+            if($restul -> num_rows > 0){
+                $row = $restul -> fetch_assoc();
+                $idBuscar = $row["id"];
+            }
+
+            $buscar = "recibo$idBuscar";
 
             foreach ($archivos as $archivo) {
                 if ($archivo != '.' && $archivo != '..' && strpos($archivo,$buscar)!== false) {
