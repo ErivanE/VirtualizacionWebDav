@@ -56,11 +56,12 @@
             </div> -->
 
             <?php
-            $directorio = '/home/pdf/';
+            $directorio = '/home/pdf';
             $archivos = scandir($directorio);
+            $buscar = "recibo6";
 
             foreach ($archivos as $archivo) {
-                if ($archivo != '.' && $archivo != '..') {
+                if ($archivo != '.' && $archivo != '..' && strpos($archivo,$buscar)!== false) {
                     ?>
                     <div class="col-12">
                         <div class="row">
