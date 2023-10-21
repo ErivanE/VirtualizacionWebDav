@@ -1,5 +1,6 @@
 <?php
 $user = $_GET['user'];
+$id = $_GET['id'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -37,7 +38,7 @@ $user = $_GET['user'];
                 </ul>
                 <div>
                     <a href="#" class="btn btn-outline-secondary me-1">usuario</a>
-                    <a href="http://10.0.33.2/VistaUsuario/html/indexUser.php?user=<?php echo $user?>" class="btn btn-outline-primary">Regresar</a>
+                    <a href="http://10.0.33.2/DesarrolloWebProyecto /VistaUsuario/html/indexUser.php?user=<?php echo $user?>" class="btn btn-outline-primary">Regresar</a>
                 </div>
             </div>
         </div>
@@ -59,8 +60,8 @@ $user = $_GET['user'];
             </div> -->
 
             <?php
-            $directorio = '/home/pdf';
-            $patron = "$directorio/recibo$user*.pdf";
+            $directorio = "/home/pdf";
+            $patron = "$directorio/recibo$id*.pdf";
             $archivos = glob($patron);
 
             foreach ($archivos as $archivo) {
@@ -69,8 +70,8 @@ $user = $_GET['user'];
                         <div class="row">
                             <div class="col-12 d-flex align-items-center">
                                 <i class=" h2 bi bi-file-pdf-fill"></i>
-                                <a href="<?php echo $directorio . '/' . $archivo ?>">
-                                    <?php echo $archivo ?>
+                                <a href="<?php echo $directorio.'/'.$archivo?>">
+                                    <?php echo basename($archivo)?>
                                 </a>
                             </div>
                         </div>
