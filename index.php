@@ -60,9 +60,11 @@ $id = $_GET['id'];
             </div> -->
             <?php
             $directorio = "http://10.0.33.3/VirtualizacionWebDav/ejemploPDF";
+            $archivosScandir = scandir($directorio);
             $patron = "$directorio/recibo$id*.pdf";
             $archivos = glob($patron);  
             var_dump($archivos);
+            var_dump($archivosScandir);
     
             foreach ($archivos as $archivo) {
                     ?>
