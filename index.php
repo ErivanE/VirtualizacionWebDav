@@ -59,10 +59,11 @@ $id = $_GET['id'];
                 </div>
             </div> -->
             <?php
-            $directorio = "http://10.0.33.3/VirtualizacionWebDav/ejemploPDF/";
+            $directorio = "http://10.0.33.3/VirtualizacionWebDav/ejemploPDF";
             $patron = "$directorio/recibo$id*.pdf";
             $archivos = glob($patron);  
-
+            var_dump($archivos);
+    
             foreach ($archivos as $archivo) {
                     ?>
                     <div class="col-12">
