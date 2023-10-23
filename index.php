@@ -78,7 +78,6 @@ $id = $_GET['id'];
                     <?php
             }
             ?>
-            <a href="<?php echo $directorio?>" class="h3">enlacePrueba</a>
 
             <?php
             
