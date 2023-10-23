@@ -60,9 +60,9 @@ $id = $_GET['id'];
             </div> -->
 
             <?php
-            $directorio = "/home/pdf";
+            $directorio = "/ejemploPDF";
             $patron = "$directorio/recibo$id*.pdf";
-            $archivos = glob($patron);
+            $archivos = glob($patron);  
 
             foreach ($archivos as $archivo) {
                     ?>
