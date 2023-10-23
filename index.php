@@ -60,11 +60,8 @@ $id = $_GET['id'];
             </div> -->
             <?php
             $directorio = "ejemploPDF";
-            $archivosScandir = scandir($directorio);
             $patron = "$directorio/recibo$id*.pdf";
-            $archivos = glob($patron);  
-            var_dump($archivos);
-            var_dump($archivosScandir);
+            $archivos = glob($patron); 
     
             foreach ($archivos as $archivo) {
                     ?>
@@ -72,7 +69,7 @@ $id = $_GET['id'];
                         <div class="row">
                             <div class="col-12 d-flex align-items-center">
                                 <i class=" h2 bi bi-file-pdf-fill"></i>
-                                <a href="<?php //echo $archivo?>" target="_blank">
+                                <a href="<?php echo $archivo?>" target="_blank">
                                     <?php echo basename($archivo)?>
                                 </a>
                             </div>
