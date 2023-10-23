@@ -64,16 +64,13 @@ $id = $_GET['id'];
             $patron = "$directorio/recibo$id*.pdf";
             $archivos = glob($patron);
 
-            $directorioArchivo;
-
             foreach ($archivos as $archivo) {
                     ?>
                     <div class="col-12">
                         <div class="row">
                             <div class="col-12 d-flex align-items-center">
                                 <i class=" h2 bi bi-file-pdf-fill"></i>
-                                <?php $directorioArchivo = $directorioArchivo.$archivo?>
-                                <a href="<?php echo $directorioArchivo?>" target="_blank">
+                                <a href="<?php echo $archivo?>" target="_blank">
                                     <?php echo basename($archivo)?>
                                 </a>
                             </div>
