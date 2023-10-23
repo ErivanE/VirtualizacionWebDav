@@ -58,7 +58,6 @@ $id = $_GET['id'];
                     </div>
                 </div>
             </div> -->
-
             <?php
             $directorio = "http://10.0.33.3/VirtualizacionWebDav/ejemploPDF/";
             $patron = "$directorio/recibo$id*.pdf";
@@ -79,8 +78,11 @@ $id = $_GET['id'];
                     <?php
             }
             ?>
+            <a href="<?php echo $directorio?>" class="h3">enlacePrueba</a>
+
             <?php
-            // $directorio = 'ejemploPDF';
+            
+// $directorio = 'ejemploPDF';
             // $archivos = scandir($directorio);
             
             // foreach ($archivos as $archivo) {
