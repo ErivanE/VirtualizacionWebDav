@@ -59,7 +59,7 @@ $id = $_GET['id'];
                 </div>
             </div> -->
             <?php
-            $directorio = "http://10.0.33.3/VirtualizacionWebDav/ejemploPDF";
+            $directorio = "ejemploPDF";
             $archivosScandir = scandir($directorio);
             $patron = "$directorio/recibo$id*.pdf";
             $archivos = glob($patron);  
